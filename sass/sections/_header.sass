@@ -1,0 +1,170 @@
+.header
+	background-color: $accent
+	display: flex
+	align-items: center
+	justify-content: space-between
+	position: sticky
+	top: 0
+	&__logo
+		height: 72px
+		flex: 0 0 260px
+		+media-breakpoint-down(md)
+			flex: 0 0 auto
+		+media-breakpoint-down(xs)
+			max-width: 230px
+		a
+			display: block
+			background-color: $white
+			height: 100%
+			display: flex
+			align-items: center
+	&__menu
+		flex: 1
+		+media-breakpoint-down(sm)
+			position: absolute
+			right: -100%
+			top: 0
+			width: 100%
+			background-color: $dark-red
+			transition: all .25s
+			display: none
+			opacity: 0
+			z-index: 2
+		&.active
+			right: 0
+			display: block
+			opacity: 1
+		ul
+			padding: 0
+			margin: 0
+			display: flex
+			list-style-type: none
+			justify-content: space-between
+			+media-breakpoint-down(sm)
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				height: 100vh
+			li
+				position: relative
+				+media-breakpoint-down(sm)
+					width: 100%
+				&:after, &:before
+					content: ''
+					display: block
+					width: 4px
+					height: 0
+					background-color: $dark-red
+					position: absolute
+					z-index: -1
+				&:after
+					top: 0
+					right: 0
+					transition: .25s linear
+				&:before
+					left: 0
+					bottom: 0
+					transition: .25s linear
+				&:hover, &.active
+					&:after, &:before
+						height: 100%
+				&.active
+					a:after, a:before
+						width: 100%
+						+media-breakpoint-down(sm)
+							display: none
+					a
+						color: $dark-red
+						+media-breakpoint-down(sm)
+							color: $white
+				a
+					text-transform: uppercase
+					font-weight: bold
+					text-align: center
+					display: block
+					height: 72px
+					padding: 0 20px
+					line-height: 72px
+					position: relative
+					z-index: 1
+					white-space: nowrap
+					+media-breakpoint-down(lg)
+						font-size: 16px
+					+media-breakpoint-down(md)
+						font-weight: 300
+						font-size: 14px
+						padding: 0 10px
+					+media-breakpoint-down(sm)
+						height: auto
+						width: 100%
+						padding: 0
+						font-size: 16px
+					&:after, &:before
+						content: ''
+						display: block
+						width: 0
+						height: 4px
+						background-color: $dark-red
+						position: absolute
+						z-index: -1
+						+media-breakpoint-down(sm)
+							display: none
+					&:after
+						left: 0
+						top: 0
+						transition: .25s linear
+					&:before
+						bottom: 0
+						right: 0
+						transition: .25s linear
+					&:hover
+						text-decoration: none
+						color: $dark-red
+						+media-breakpoint-down(sm)
+							color: $white
+							background-color: $accent
+						&:after, &:before
+							width: 100%
+
+.mobile-btn, .callback-btn
+	display: none
+	width: 50px
+	height: 50px
+	background-color: transparent
+	border: none
+	cursor: pointer
+	+media-breakpoint-down(sm)
+		display: block
+
+.mobile-btn
+	position: relative
+	z-index: 2
+	span
+		width: 25px
+		height: 1px
+		background-color: #fff
+		display: block
+		margin: 6px auto
+		transform: rotate(0)
+		opacity: 1
+		transition: all .2s
+
+	&.active span
+		&:first-child
+			transform: rotate(45deg)
+			position: relative
+			top: 7px
+		&:nth-child(2)
+			opacity: 0
+		&:last-child
+			transform: rotate(-45deg)
+			position: relative
+			top: -7px
+
+.callback-btn
+	position: absolute
+	right: 45px
+	img
+		width: 24px
+		height: 100%
+		margin: 0 auto

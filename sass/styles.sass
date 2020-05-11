@@ -10,6 +10,7 @@
 	color: #fff
 
 body
+	background-attachment: fixed
 	font-size: 20px
 	min-width: 320px
 	position: relative
@@ -29,6 +30,19 @@ img
 	display: block
 	max-width: 100%
 	height: auto
+a
+	color: $white
+	text-decoration: none
+	transition: all .25s ease
+.container
+	+media-breakpoint-down(lg)
+		max-width: 96%
+	+media-breakpoint-down(md)
+		max-width: 100%
+		padding: 0
+
+.shadow
+	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25)
 
 .hidden
 	display: none
@@ -40,6 +54,10 @@ img
 	width: 1px
 	height: 1px
 	margin: -1px
+
+// Section's
+
+@import "sections/header"
 
 
 @import "media"
