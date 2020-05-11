@@ -3,15 +3,14 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
-	position: sticky
-	top: 0
+	position: relative
 	&__logo
 		height: 72px
 		flex: 0 0 260px
 		+media-breakpoint-down(md)
 			flex: 0 0 auto
 		+media-breakpoint-down(xs)
-			max-width: 230px
+			max-width: 220px
 		a
 			display: block
 			background-color: $white
@@ -56,7 +55,7 @@
 					height: 0
 					background-color: $dark-red
 					position: absolute
-					z-index: -1
+					z-index: 1
 				&:after
 					top: 0
 					right: 0
