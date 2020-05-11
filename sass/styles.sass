@@ -19,6 +19,7 @@ body
 	overflow-x: hidden
 	font-weight: 300
 	color: $text
+	height: 1000px
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -44,6 +45,25 @@ a
 .shadow
 	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25)
 	background-color: $white
+.btn
+	font-weight: bold
+	padding: 5px 15px
+	border: 2px solid transparent
+	background-color: $accent
+	color: $white
+	display: inline-block
+	&:hover
+		background-color: transparent
+		color: $accent
+		border-color: $accent
+		text-decoration: none
+	&.btn-white
+		background-color: transparent
+		color: $accent
+		border-color: $accent
+		&:hover
+			background-color: $accent
+			color: $white
 
 .hidden
 	display: none
@@ -60,6 +80,7 @@ a
 
 @import "sections/header"
 @import "sections/banner"
+@import "sections/pages"
 
 
 @import "media"
