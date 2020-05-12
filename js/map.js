@@ -10,7 +10,7 @@ $(function() {
                 balloonContentBody: '<a href="tel:+78469552533" class="dealer-phone">☎️ +7 846 955-26-33</a><br>\
                     <br> \
                     г. Самара, улица Ветлянская, 41<br>\
-                    <a href="https://yandex.ru/maps/?z=15&ll=50.26109099999999,53.19987499999774&l=map&rtext=~53.199875,50.261091&origin=jsapi_2_1_76&from=api-maps"  target="_blank" class="dealer-phone">📍 Проложить маршрут</a><br>',
+                    <a href="https://yandex.ru/maps/51/samara/?from=api-maps&ll=50.288000%2C53.188700&mode=routes&origin=jsapi_2_1_76&rtext=~53.188700%2C50.288000&rtt=auto&ruri=~&z=16"  target="_blank" class="dealer-phone">📍 Проложить маршрут</a><br>',
                 balloonContentFooter: 'пн-пт 8:00–17:00,<br>перерыв 12:00–13:00',
                 hintContent: 'АО "Тепличный"'
             },

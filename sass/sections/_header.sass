@@ -20,7 +20,7 @@
 	&__menu
 		flex: 1
 		+media-breakpoint-down(sm)
-			position: absolute
+			position: fixed
 			right: -100%
 			top: 0
 			width: 100%
@@ -48,34 +48,11 @@
 				position: relative
 				+media-breakpoint-down(sm)
 					width: 100%
-				&:after, &:before
-					content: ''
-					display: block
-					width: 4px
-					height: 0
-					background-color: $dark-red
-					position: absolute
-					z-index: 1
-				&:after
-					top: 0
-					right: 0
-					transition: .25s linear
-				&:before
-					left: 0
-					bottom: 0
-					transition: .25s linear
-				&:hover, &.active
-					&:after, &:before
-						height: 100%
 				&.active
-					a:after, a:before
-						width: 100%
-						+media-breakpoint-down(sm)
-							display: none
 					a
-						color: $dark-red
-						+media-breakpoint-down(sm)
-							color: $white
+						text-decoration: none
+						color: $white
+						background-color: darken($accent, 5%)
 				a
 					text-transform: uppercase
 					font-weight: bold
@@ -98,32 +75,10 @@
 						width: 100%
 						padding: 0
 						font-size: 16px
-					&:after, &:before
-						content: ''
-						display: block
-						width: 0
-						height: 4px
-						background-color: $dark-red
-						position: absolute
-						z-index: -1
-						+media-breakpoint-down(sm)
-							display: none
-					&:after
-						left: 0
-						top: 0
-						transition: .25s linear
-					&:before
-						bottom: 0
-						right: 0
-						transition: .25s linear
 					&:hover
 						text-decoration: none
-						color: $dark-red
-						+media-breakpoint-down(sm)
-							color: $white
-							background-color: $accent
-						&:after, &:before
-							width: 100%
+						color: $white
+						background-color: darken($accent, 5%)
 
 .mobile-btn, .callback-btn
 	display: none
