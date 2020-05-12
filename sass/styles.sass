@@ -8,7 +8,6 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
 body
 	background-attachment: fixed
 	font-size: 20px
@@ -21,6 +20,20 @@ body
 	color: $text
 	&.active
 		overflow: hidden
+	&.isnohome
+		height: 100%
+		.page-wrapper
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 100%
+			background-color: $white
+			box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25)
+			padding: 0
+		.header, .footer
+			flex: 0 0 auto
+		main
+			flex: 1 0 auto
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -84,6 +97,7 @@ a
 @import "sections/pages"
 @import "sections/maps"
 @import "sections/footer"
+@import "sections/page-content"
 
 
 @import "media"
