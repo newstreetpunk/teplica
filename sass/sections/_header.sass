@@ -25,6 +25,7 @@
 			position: fixed
 			right: -100%
 			top: 0
+			max-width: 340px
 			width: 100%
 			background-color: $dark-red
 			transition: all .25s
@@ -35,7 +36,7 @@
 			right: 0
 			display: block
 			opacity: 1
-		ul
+		>ul
 			padding: 0
 			margin: 0
 			display: flex
@@ -43,19 +44,42 @@
 			justify-content: space-between
 			+media-breakpoint-down(sm)
 				flex-direction: column
-				align-items: center
+				//align-items: center
 				justify-content: center
 				height: 100vh
-			li
+			>li
 				flex: 1
+				position: relative
 				+media-breakpoint-down(sm)
 					width: 100%
+					flex: 0 0 auto
 				&.active
+					background-color: darken($accent, 5%)
 					a
 						text-decoration: none
 						color: $white
 						background-color: darken($accent, 5%)
-				a
+				>ul
+					position: absolute
+					width: 100%
+					top: 100%
+					left: 0
+					background-color: darken($accent, 5%)
+					z-index: 10
+					list-style-type: none
+					padding: 0
+					display: none
+					a
+						color: $white
+						text-transform: uppercase
+						font-size: 16px
+						padding: 8px 0 8px 50px
+						display: block
+						&:hover
+							background-color: $accent
+							text-decoration: none
+
+				>a
 					text-transform: uppercase
 					font-weight: bold
 					text-align: center
@@ -78,11 +102,13 @@
 						line-height: 50px
 						width: 100%
 						padding: 0
+						padding-left: 20px
 						font-size: 16px
+						text-align: left
 					&:hover
 						text-decoration: none
 						color: $white
-						background-color: darken($accent, 5%)
+						//background-color: darken($accent, 5%)
 
 .mobile-btn, .callback-btn
 	display: none
