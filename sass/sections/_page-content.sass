@@ -1,5 +1,9 @@
 .page
 	&__title
+		&.product-cat
+			background-color: $red
+			+media-breakpoint-down(sm)
+				background-size: 50%	
 		background-color: $dark-red
 		padding: 22px 35px
 		color: $white
@@ -19,10 +23,18 @@
 		font-size: 18px
 		font-weight: 400
 		display: flex
+		&.product__content
+			display: block
+			h2
+				text-align: center
+				+media-breakpoint-down(sm)
+					font-size: 18px
 		+media-breakpoint-down(md)
 			flex-direction: column-reverse
 		+media-breakpoint-down(sm)
 			padding: 20px
+		&--text
+			width: 100%
 		&--img
 			flex: 0 0 450px
 			margin-left: 50px

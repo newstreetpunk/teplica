@@ -46,9 +46,11 @@ img
 	max-width: 100%
 	height: auto
 a
-	color: $white
+	color: $accent
 	text-decoration: none
 	transition: all .25s ease
+	&:hover
+		color: $dark-red
 .container
 	+media-breakpoint-down(lg)
 		max-width: 96%
@@ -90,6 +92,11 @@ a
 	height: 1px
 	margin: -1px
 
+hr
+	background-color: $text
+	display: block
+	margin-bottom: 20px
+
 // Section's
 
 @import "sections/header"
@@ -98,6 +105,7 @@ a
 @import "sections/maps"
 @import "sections/footer"
 @import "sections/page-content"
+@import "sections/product"
 
 
 @import "media"
