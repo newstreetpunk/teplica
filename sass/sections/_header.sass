@@ -152,3 +152,54 @@
 		width: 24px
 		height: 100%
 		margin: 0 auto
+
+.callback-link
+	position: fixed
+	top: 50%
+	right: -65px
+	z-index: 100
+	transform: rotate(-90deg) translateY(-50%)
+	background-color: $accent
+	color: $white
+	font-size: 16px
+	padding: 4px 15px
+	border-radius: 3px 3px 0 0
+	box-shadow: 0 0 10px rgba(#000, .2)
+	+media-breakpoint-down(sm)
+		display: none
+	&:hover
+		background-color: darken($accent, 5%)
+		text-decoration: none
+		color: $white
+
+.modal
+	max-width: 500px
+	width: 100%
+	background-color: $white
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	padding-bottom: 40px
+	line-height: 1.4
+	h2
+		line-height: 1
+		background-color: $accent
+		padding: 12px 0
+		text-align: center
+		font-weight: 300
+		color: $white
+		font-size: 20px
+		text-transform: uppercase
+	p
+		padding: 0 30px
+		text-align: center
+		margin-bottom: 20px
+	form
+		padding: 0 30px
+form
+	input, textarea, button
+		display: block
+		width: 100%
+		margin-bottom: 15px
+		font-size: 16px
+		padding: 8px 10px

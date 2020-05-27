@@ -26,4 +26,11 @@ jQuery(function($) {
 		touchThreshold: 100
 	});
 
+	$('.callback-link, .callback-btn').magnificPopup({
+		type: 'inline',
+		fixedContentPos: true,
+		preloader: false,
+	});
+
+
 });
