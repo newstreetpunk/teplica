@@ -32,5 +32,20 @@ jQuery(function($) {
 		preloader: false,
 	});
 
+	$('a[href="#popup"]').on('click', function(){
+		$('.overlay').show();
+		$('.privacy-wrap').show();
+		$('html').css({
+			'margin-right': '17px',
+			'overflow': 'hidden'
+		});
+		return false;
+	});
+	$('.overlay, .privacy-close').on('click', function(){
+		$('.overlay').hide();
+		$('.privacy-wrap').hide();
+		$('html').removeAttr('style');
+	});
+
 
 });
