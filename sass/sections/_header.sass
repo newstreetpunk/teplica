@@ -7,18 +7,22 @@
 	&__logo
 		height: 100px
 		flex: 0 0 260px
+		a, div
+			display: block
+			background-color: $white
+			height: 100%
+			display: flex
+			align-items: center
+			padding: 0 20px
+			min-width: 220px
 		+media-breakpoint-down(md)
 			flex: 0 0 auto
 		+media-breakpoint-down(sm)
 			height: 72px
 		+media-breakpoint-down(xs)
 			max-width: 220px
-		a
-			display: block
-			background-color: $white
-			height: 100%
-			display: flex
-			align-items: center
+			a, div
+				padding: 0 10px
 	&__menu
 		flex: 1
 		+media-breakpoint-down(sm)
