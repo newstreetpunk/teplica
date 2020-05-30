@@ -2,6 +2,7 @@
 			src: [
 				'node_modules/jquery/dist/jquery.min.js',
 				'node_modules/slick-carousel/slick/slick.min.js',
+				base.teplica + '/libs/Magnific-Popup-master/jquery.magnific-popup.js',
 				//base.teplica + '/libs/animate/animate-css.js',
 				//base.teplica + '/libs/lazyload.min.js',
 				//base.teplica + '/libs/waypoint.js',
