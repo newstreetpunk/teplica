@@ -4,16 +4,16 @@ RewriteEngine On
 RewriteBase /
 
 
-# send to https
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 # without www all domian - send to "without www"
 # RewriteCond %{HTTP_HOST} .
 RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # RewriteCond %{HTTP_HOST} ^www.63teplica.ru$ [NC]
 # RewriteRule ^(.*)$ https://63teplica.ru/$1 [R=301,L]
+
+# send to https
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 </IfModule>
 
