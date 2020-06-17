@@ -1,3 +1,4 @@
 *.php
 phpmailer
 sftp-config.json
+/.alexsab/
