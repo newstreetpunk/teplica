@@ -6783,7 +6783,7 @@ hr {
     top: 0;
     max-width: 340px;
     width: 100%;
-    background-color: #810307;
+    background-color: #e06a6a;
     -webkit-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
@@ -7106,6 +7106,24 @@ form .btn {
 
 mark {
   background-color: rgba(224, 106, 106, 0.6);
+}
+
+.mobail-link {
+  display: none !important;
+}
+
+.mobail-link.border-bot {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobail-link.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 767.98px) {
+  .mobail-link {
+    display: block !important;
+  }
 }
 
 .banner__item.slick-active img {

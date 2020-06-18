@@ -31,7 +31,7 @@
 			top: 0
 			max-width: 340px
 			width: 100%
-			background-color: $dark-red
+			background-color: $accent
 			transition: all .25s
 			display: none
 			opacity: 0
@@ -237,3 +237,12 @@ form
 		font-weight: 300
 mark
 	background-color: rgba($accent, .6)
+
+.mobail-link
+	display: none !important
+	&.border-bot
+		border-bottom: 1px solid rgba(#fff, .4)
+	&.border-top
+		border-top: 1px solid rgba(#fff, .4)
+	+media-breakpoint-down(sm)
+		display: block !important

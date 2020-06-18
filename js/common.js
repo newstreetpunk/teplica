@@ -9,10 +9,19 @@ jQuery(function($) {
 	// $('.header__menu>ul>li>a:contains("продукция")').parent().append('<span class="menu-arrow"></span>');
 	// $('.header__menu>ul>li>a:contains("продукция")').next().find('li').append('<span class="menu-arrow"></span>');
 
-	$('.header__menu>ul>li').hover(function(){
-		$(this).toggleClass('active');
-		$(this).find('ul').slideToggle(100);
-	});
+	function tplResize(){	
+		$('.header__menu>ul>li').hover(function(){
+			if ( $(window).width() > 768 ) {
+				$(this).toggleClass('active');
+				$(this).find('ul').slideToggle(100);
+			}else{
+				$(this).toggleClass('active');
+			}
+		});	
+	}
+	tplResize();
+
+	//$(window).on('resize', function(){ tplResize() });
 
 	$('.banner').slick({
 		draggable: true,
@@ -26,7 +35,7 @@ jQuery(function($) {
 		touchThreshold: 100
 	});
 
-	$('.callback-link, .callback-btn').magnificPopup({
+	$('a[href="#callback"]').magnificPopup({
 		type: 'inline',
 		fixedContentPos: true,
 		preloader: false,
