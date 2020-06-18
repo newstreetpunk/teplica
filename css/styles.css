@@ -6198,102 +6198,6 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
-  color: #4169e1;
-}
-
-a:visited {
-  color: #800080;
-}
-
-a:hover, a:focus, a:active {
-  color: #191970;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:hover, a:active {
-  outline: 0;
-}
-
-/* Forms
---------------------------------------------- */
-button {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
-}
-
-input[type="button"], input[type="reset"], input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 1;
-  padding: 0.6em 1em 0.4em;
-}
-
-button:hover {
-  border-color: #ccc #bbb #aaa;
-}
-
-input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
-}
-
-button:active, button:focus {
-  border-color: #aaa #bbb #bbb;
-}
-
-input[type="button"]:active, input[type="button"]:focus {
-  border-color: #aaa #bbb #bbb;
-}
-
-input[type="reset"]:active, input[type="reset"]:focus {
-  border-color: #aaa #bbb #bbb;
-}
-
-input[type="submit"]:active, input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
-}
-
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus {
-  color: #111;
-}
-
-textarea:focus {
-  color: #111;
-}
-
-select {
-  border: 1px solid #ccc;
-}
-
-textarea {
-  width: 100%;
-}
-
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
@@ -6942,11 +6846,17 @@ hr {
   }
 }
 
-.header__menu > ul > li.active {
+.header__menu > ul > li.active, .header__menu > ul > li.current-menu-item {
   background-color: #dc5555;
 }
 
-.header__menu > ul > li.active a {
+.header__menu > ul > li.active a, .header__menu > ul > li.current-menu-item a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #dc5555;
+}
+
+.header__menu > ul > li.current-menu-parent a {
   text-decoration: none;
   color: #ffffff;
   background-color: #dc5555;
@@ -7863,6 +7773,82 @@ mark {
     margin-right: 0;
     margin-bottom: 20px;
   }
+}
+
+.product__content--list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.product__content--list .pages__link.product-cat {
+  background-size: contain;
+  background-position: right -10px bottom -30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31%;
+  height: 200px;
+  margin: 0 1% 2%;
+}
+
+@media (max-width: 575.98px) {
+  .product__content--list .pages__link.product-cat {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.product__content--list article {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31%;
+  margin: 0 1% 2%;
+}
+
+@media (max-width: 575.98px) {
+  .product__content--list article {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.product__content--list article a {
+  margin-bottom: 10px;
+}
+
+.product__content--list article a:hover {
+  text-decoration: none;
 }
 
 /*==========  Desktop First  ==========*/

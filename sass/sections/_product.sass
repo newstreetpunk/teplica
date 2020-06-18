@@ -22,3 +22,34 @@
 			+media-breakpoint-down(xs)
 				margin-right: 0
 				margin-bottom: 20px
+	&__content--list
+		display: flex
+		flex-wrap: wrap
+		.pages__link.product-cat
+			background-size: contain
+			background-position: right -10px bottom -30px
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 31%
+			height: 200px
+			margin: 0 1% 2%
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin: 0
+				margin-bottom: 30px
+		article
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			width: 31%
+			margin: 0 1% 2%
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin: 0
+				margin-bottom: 30px
+			a
+				margin-bottom: 10px
+				&:hover
+					text-decoration: none

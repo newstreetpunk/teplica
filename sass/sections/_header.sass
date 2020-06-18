@@ -57,8 +57,13 @@
 				+media-breakpoint-down(sm)
 					width: 100%
 					flex: 0 0 auto
-				&.active
+				&.active, &.current-menu-item
 					background-color: darken($accent, 5%)
+					a
+						text-decoration: none
+						color: $white
+						background-color: darken($accent, 5%)
+				&.current-menu-parent
 					a
 						text-decoration: none
 						color: $white
