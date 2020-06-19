@@ -7782,8 +7782,11 @@ mark {
 .product__item img {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
-  margin-right: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-right: 30px;
 }
 
 @media (max-width: 575.98px) {
@@ -7851,6 +7854,14 @@ mark {
           align-items: center;
   width: 31%;
   margin: 0 1% 2%;
+}
+
+.product__content--list article img {
+  height: 202px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media (max-width: 575.98px) {
