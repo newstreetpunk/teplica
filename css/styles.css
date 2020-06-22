@@ -7292,6 +7292,7 @@ mark {
   font-size: 40px;
   text-transform: uppercase;
   color: #e06a6a;
+  line-height: 1.2
 }
 
 @media (max-width: 991.98px) {
