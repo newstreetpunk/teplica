@@ -56,5 +56,23 @@ jQuery(function($) {
 		$('html').removeAttr('style');
 	});
 
+	// row, col, width, height
+	var pos = [
+		[1,1,2,1],
+		[1,3,1,2],
+		[1,4,1,2],
+		[2,1,1,1],
+		[2,2,1,1],
+		[3,1,1,2],
+		[3,2,1,2],
+		[3,3,2,1],
+		[4,3,2,1]
+	];
+	$('.pages .pages__link').each(function(i, element){
+		$( this ).css('grid-row-start', pos[i][0]);
+		$( this ).css('grid-column-start', pos[i][1]);
+		$( this ).css('grid-row-end', pos[i][0]+pos[i][3]);
+		$( this ).css('grid-column-end', pos[i][1]+pos[i][2]);
+	});
 
 });
