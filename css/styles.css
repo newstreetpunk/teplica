@@ -7229,7 +7229,14 @@ mark {
 
 @media (max-width: 767.98px) {
   .pages__link {
+    width: calc((100% / 2) - 10px);
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pages__link {
+    min-height: 120px;
   }
 }
 
@@ -7255,26 +7262,6 @@ mark {
       grid-row-start: 1;
   -ms-grid-row-span: 2;
   grid-row-end: 3;
-}
-
-@media (max-width: 767.98px) {
-  .pages__link:nth-child(2), .pages__link:nth-child(3) {
-    width: calc((100% / 2) - 10px);
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .pages__link:nth-child(2), .pages__link:nth-child(3) {
-    min-height: 250px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .pages__link:nth-child(4), .pages__link:nth-child(5) {
-    width: calc((100% / 2) - 10px);
-    height: 45vw;
-  }
 }
 
 .pages__link:hover {
@@ -7309,7 +7296,7 @@ mark {
 
 @media (max-width: 575.98px) {
   .pages__link h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
