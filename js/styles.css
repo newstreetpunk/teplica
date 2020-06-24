@@ -7648,10 +7648,6 @@ mark {
   margin: 0;
 }
 
-.page__title h1 a{
-  color: #fff;
-}
-
 @media (max-width: 575.98px) {
   .page__title h1 {
     font-size: 20px;
