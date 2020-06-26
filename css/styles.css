@@ -7167,10 +7167,8 @@ mark {
   padding: 20px 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
 
@@ -7205,6 +7203,8 @@ mark {
   -o-transition: all .25s;
   transition: all .25s;
   position: relative;
+  min-height: 250px;
+  height: auto;
 }
 
 @media (max-width: 991.98px) {

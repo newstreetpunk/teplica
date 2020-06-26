@@ -1,8 +1,7 @@
 .pages
 	padding: 20px 0
 	display: grid
-	grid-template-rows: 1fr 1fr
-	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-template-columns: repeat(4, 1fr)
 	grid-gap: 20px
 	+media-breakpoint-down(md)
 		padding: 20px 20px 0
@@ -17,6 +16,8 @@
 		padding: 20px
 		transition: all .25s
 		position: relative
+		min-height: 250px
+		height: auto
 		+media-breakpoint-down(md)
 			font-size: 16px
 			padding: 10px
