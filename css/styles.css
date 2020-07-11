@@ -7667,6 +7667,10 @@ mark {
   }
 }
 
+.page__title h1 a {
+  color: #fff;
+}
+
 .page__content {
   padding: 30px 35px;
   color: #000000;
@@ -7777,6 +7781,19 @@ mark {
 
 .product__item:last-child {
   margin-bottom: 0;
+}
+
+.product__item--text p {
+  margin-bottom: 10px;
+}
+
+.product__item--text h3 a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.product__item--text h3 a:hover {
+  text-decoration: none;
 }
 
 .product__item img {
