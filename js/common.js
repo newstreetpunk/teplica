@@ -42,15 +42,19 @@ jQuery(function($) {
 	});
 
 	$('a[href="#product-callback"]').click(function(){
-		var th    = $(this),
-			id    = th.attr('href'),
-			str   = id.replace('#', ''),
-			title = th.closest('.product__item').find('a.product-title').text(),
-			modal = $('#'+str+''),
-			input = modal.find('input#title-form');
+		var th          = $(this),
+			id          = th.attr('href'),
+			str         = id.replace('#', ''),
+			productName = th.closest('.product__item').find('a.product-title').text(),
+			pageTitle   = $('h1').text(),
+			catName     = $('h1').find('a').text(),
+			subCatName  = pageTitle.split(" ").pop(),
+			modal       = $('#'+str+''),
+			input       = modal.find('input#title-form');
 
-		modal.find('h2').text(title);
-		input.val(title.replace(/[^ A-zА-яЁё\s]/g, ''));
+		modal.find('h2').text(subCatName);
+		modal.find('.product-name').text(productName);
+		input.val(pageTitle +' - '+ productName);
 	});
 
 	$('a[href="#popup"]').on('click', function(){
