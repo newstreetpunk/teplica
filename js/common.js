@@ -52,7 +52,7 @@ jQuery(function($) {
 			modal       = $('#'+str+''),
 			input       = modal.find('input#title-form');
 
-		modal.find('h2').text(subCatName);
+		modal.find('h2').text(pageTitle);
 		modal.find('.product-name').text(productName);
 		input.val(pageTitle +' - '+ productName);
 	});
