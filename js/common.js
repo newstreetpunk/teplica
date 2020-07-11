@@ -35,10 +35,22 @@ jQuery(function($) {
 		touchThreshold: 100
 	});
 
-	$('a[href="#callback"]').magnificPopup({
+	$('a[href="#callback"], a[href="#product-callback"]').magnificPopup({
 		type: 'inline',
 		fixedContentPos: true,
 		preloader: false,
+	});
+
+	$('a[href="#product-callback"]').click(function(){
+		var th    = $(this),
+			id    = th.attr('href'),
+			str   = id.replace('#', ''),
+			title = th.closest('.product__item').find('a.product-title').text(),
+			modal = $('#'+str+''),
+			input = modal.find('input#title-form');
+
+		modal.find('h2').text(title);
+		input.val(title.replace(/[^ A-zА-яЁё\s]/g, ''));
 	});
 
 	$('a[href="#popup"]').on('click', function(){

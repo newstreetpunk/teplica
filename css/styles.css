@@ -7742,6 +7742,13 @@ mark {
   text-transform: uppercase;
 }
 
+.product-read-more-img {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 .product__list {
   padding: 30px 0;
 }
@@ -7794,6 +7801,26 @@ mark {
 
 .product__item--text h3 a:hover {
   text-decoration: none;
+}
+
+.product__item--btn {
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  .product__item--btn {
+    text-align: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .product__item--btn {
+    margin-top: 25px;
+  }
+  .product__item--btn a {
+    display: block;
+    text-align: center;
+  }
 }
 
 .product__item img {
