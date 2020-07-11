@@ -21,6 +21,10 @@
 		+media-breakpoint-down(md)
 			font-size: 16px
 			padding: 10px
+		+media-breakpoint-down(sm)
+			width: calc((100% / 2) - 10px)
+			min-height: 150px
+			height: auto
 		.icon
 			position: absolute
 			right: 20px
@@ -38,21 +42,7 @@
 			grid-row-end: 2
 			+media-breakpoint-down(sm)
 				width: 100%
-		&:nth-child(2),	&:nth-child(3)
-			grid-row-start: 1
-			grid-row-end: 3
-			+media-breakpoint-down(sm)
-				width: calc((100% / 2) - 10px)
-				min-height: 300px
-			+media-breakpoint-down(xs)
-				//width: 47%
-				min-height: 250px				
-		&:nth-child(4), &:nth-child(5)
-			+media-breakpoint-down(sm)
-				width: calc((100% / 2) - 10px)
-				height: 45vw
-			+media-breakpoint-down(xs)
-				//width: 47%
+				min-height: 0
 		&:hover
 			text-decoration: none
 			color: $text

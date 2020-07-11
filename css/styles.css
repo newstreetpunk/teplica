@@ -7214,6 +7214,14 @@ mark {
   }
 }
 
+@media (max-width: 767.98px) {
+  .pages__link {
+    width: calc((100% / 2) - 10px);
+    min-height: 150px;
+    height: auto;
+  }
+}
+
 .pages__link .icon {
   position: absolute;
   right: 20px;
@@ -7248,33 +7256,7 @@ mark {
 @media (max-width: 767.98px) {
   .pages__link:nth-child(1) {
     width: 100%;
-  }
-}
-
-.pages__link:nth-child(2), .pages__link:nth-child(3) {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-row-span: 2;
-  grid-row-end: 3;
-}
-
-@media (max-width: 767.98px) {
-  .pages__link:nth-child(2), .pages__link:nth-child(3) {
-    width: calc((100% / 2) - 10px);
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .pages__link:nth-child(2), .pages__link:nth-child(3) {
-    min-height: 250px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .pages__link:nth-child(4), .pages__link:nth-child(5) {
-    width: calc((100% / 2) - 10px);
-    height: 45vw;
+    min-height: 0;
   }
 }
 
@@ -7747,6 +7729,15 @@ mark {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  max-width: 160px;
+  margin-right: 30px;
+}
+
+@media (max-width: 575.98px) {
+  .product-read-more-img {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 .product__list {
@@ -7783,11 +7774,19 @@ mark {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
   }
 }
 
 .product__item:last-child {
   margin-bottom: 0;
+}
+
+.product__item--text {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .product__item--text p {
@@ -7803,16 +7802,6 @@ mark {
   text-decoration: none;
 }
 
-.product__item--btn {
-  text-align: right;
-}
-
-@media (max-width: 767.98px) {
-  .product__item--btn {
-    text-align: left;
-  }
-}
-
 @media (max-width: 575.98px) {
   .product__item--btn {
     margin-top: 25px;
@@ -7825,16 +7814,17 @@ mark {
 
 .product__item img {
   width: 160px;
-  height: 160px;
+  height: 130px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  margin-right: 30px;
 }
 
 @media (max-width: 575.98px) {
   .product__item img {
+    width: 100%;
+    height: auto;
     margin-right: 0;
     margin-bottom: 20px;
   }

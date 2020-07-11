@@ -46,8 +46,8 @@ jQuery(function($) {
 			id          = th.attr('href'),
 			str         = id.replace('#', ''),
 			productName = th.closest('.product__item').find('a.product-title').text(),
-			pageTitle   = $('h1').text(),
-			catName     = $('h1').find('a').text(),
+			pageTitle   = $('h1.title-page').text(),
+			//catName     = $('h1.title-page').find('a').text(),
 			subCatName  = pageTitle.split(" ").pop(),
 			modal       = $('#'+str+''),
 			input       = modal.find('input#title-form');
