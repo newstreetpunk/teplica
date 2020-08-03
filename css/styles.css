@@ -7734,6 +7734,12 @@ mark {
   margin-right: 30px;
 }
 
+@media (max-width: 767.98px) {
+  .product-read-more-img {
+    max-width: 49%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .product-read-more-img {
     max-width: 100%;
