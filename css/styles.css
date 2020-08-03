@@ -7729,7 +7729,8 @@ mark {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  max-width: 160px;
+  max-width: 400px;
+  width: 100%;
   margin-right: 30px;
 }
 
@@ -7813,8 +7814,7 @@ mark {
 }
 
 .product__item img {
-  width: 160px;
-  height: 130px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
