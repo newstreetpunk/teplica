@@ -129,7 +129,7 @@ function teplica_watch() {
 	watch(projects.teplica.code.src).on('change', browserSync.reload);
 };
 
-module.exports = parallel(teplica_styles, teplica_scripts, teplica_browsersync, teplica_watch);
+exports.teplica = parallel(teplica_styles, teplica_scripts, teplica_browsersync, teplica_watch);
 
 
 /* teplica END */
