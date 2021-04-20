@@ -1,43 +1,31 @@
 $(function() {
 
-    let maps = [
-            {
-                parent: '.map',
-                id: "map1",
-                position: [53.1887,50.2880],
-                zoom: 16,
-                balloonContentHeader: 'АО "Тепличный"',
-                balloonContentBody: '<a href="tel:+78469552533" class="dealer-phone">☎️ +7 846 955-26-33</a><br>\
-                    <br> \
-                    г. Самара, улица Ветлянская, 41<br>\
-                    <a href="https://yandex.ru/maps/51/samara/?from=api-maps&ll=50.288000%2C53.188700&mode=routes&origin=jsapi_2_1_76&rtext=~53.188700%2C50.288000&rtt=auto&ruri=~&z=16"  target="_blank" class="dealer-phone">📍 Проложить маршрут</a><br>',
-                balloonContentFooter: 'пн-пт 8:00–17:00,<br>перерыв 12:00–13:00',
-                hintContent: 'АО "Тепличный"'
-            },
-        ],
-        start_load_script = false, // Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
+    let start_load_script = false, // Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
         end_load_script = false; // Переменная для определения был ли загружен скрипт Яндекс.Карт полностью (чтобы не возникли какие-нибудь ошибки, если мы загружаем несколько карт одновременно)
 
 
     //Функция создания карты сайта и затем вставки ее в блок с идентификатором "map-yandex"
     function init() {
         var myMapTemp = new ymaps.Map(this.id, {
-            center: this.position, // координаты центра на карте
+            center: [53.2446,50.2526], // координаты центра на карте
             zoom: this.zoom, // коэффициент приближения карты
         });
         myMapTemp.behaviors.disable('scrollZoom');
 
-        var myPlacemarkTemp = new ymaps.Placemark(
-            this.position, {
-                balloonContentHeader: this.balloonContentHeader,
-                balloonContentBody: this.balloonContentBody,
-                balloonContentFooter: this.balloonContentFooter,
-                hintContent: this.hintContent
-            }, {
-                preset: 'islands#blueFactoryIcon',
-                iconColor: '#e06a6a'
-            });
-        myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
+        this.placemarks.forEach(function(placemark){
+            var myPlacemarkTemp = new ymaps.Placemark(
+                placemark.position, {
+                    balloonContentHeader: placemark.balloonContentHeader,
+                    balloonContentBody: placemark.balloonContentBody,
+                    balloonContentFooter: placemark.balloonContentFooter,
+                    hintContent: placemark.hintContent
+                }, {
+                    // preset: 'islands#blueFactoryIcon',
+                    preset: placemark.preset,
+                    iconColor: '#e06a6a'
+                });
+            myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
+        });
 
         // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
         var layer = myMapTemp.layers.get(0).get(0),
@@ -138,4 +126,5 @@ $(function() {
     maps.forEach(function(map){
         ymap(map)
     });
+    
 });

@@ -91,4 +91,25 @@ jQuery(function($) {
 		$( this ).css('grid-column-end', pos[i][1]+pos[i][2]);
 	});
 
+	$('.my-gallary .blocks-gallery-grid').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Загрузка изображения...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+				preload: [0,1],// Will preload 0 - before current, and 1 after the current image
+				tPrev: 'Назад (Кнопка влево)', // title for left button
+  				tNext: 'Вперед (Кнопка вправо)', // title for right button
+  				tCounter: '<span class="mfp-counter">%curr% из %total%</span>' // markup of counter
+  			},
+  			image: {
+  				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+  				titleSrc: function(item) {
+  					return '';
+  				}
+  			}
+  	});
+
 });
